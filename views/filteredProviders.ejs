@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Data</title>
+</head>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1>4. Retrieve all providers by their specialty</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Speciality</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+            <th>Joining Date</th>
+        </tr>
+        <% data.forEach(function(row) { %>
+        <tr>
+            <td><%= row.provider_id %></td>
+            <td><%= row.first_name %></td>
+            <td><%= row.last_name %></td>
+            <td><%= row.provider_specialty %></td>
+            <td><%= row.email_address %></td>
+            <td><%= row.phone_number %></td>
+            <td><%= row.date_joined %></td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
